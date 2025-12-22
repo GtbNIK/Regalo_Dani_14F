@@ -1,0 +1,265 @@
+:root {
+  --primary-pink: #ffd1dc;
+  --deep-pink: #ff6680;
+  --text-color: #4a4a4a;
+  --bg-gradient: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  color: var(--text-color);
+  background: var(--bg-gradient);
+  height: 100vh;
+  overflow: hidden; /* No scrolling, full 'app' feel */
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Let clicks pass through by default */
+}
+
+/* Background Hearts */
+.hearts-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    background: url('assets/kai/CORAZON.png') center/contain no-repeat; /* Use the heart asset if available, or a shape */
+    opacity: 0.6;
+    animation: floatUp linear infinite;
+}
+
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* UI Layer */
+.ui-layer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+  z-index: 100;
+}
+
+.instruction {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 8px 16px;
+  border-radius: 20px;
+  animation: pulse 2s infinite;
+}
+
+.key {
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Kai Layer & Layout States */
+.kai-layer {
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 50;
+  display: flex;
+  pointer-events: auto; /* Allow clicks */
+}
+
+.kai-container {
+  position: relative;
+  transition: all 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#kai-image {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+/* Speech Bubble */
+.speech-bubble {
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  max-width: 80%;
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bubble-arrow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: var(--glass-bg);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+/* --- STATE: INTRO (Kai Centered) --- */
+.state-intro {
+  justify-content: center;
+  align-items: center;
+}
+
+.state-intro .kai-container {
+  width: 400px; /* Adjust based on image size */
+}
+
+/* --- STATE: MEMORY (Kai Corner) --- */
+.state-memory {
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 2rem;
+}
+
+.state-memory .kai-container {
+  width: 250px;
+  flex-direction: column; /* Bubble on top of Kai */
+}
+
+.state-memory .speech-bubble {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+/* Content Layer */
+.content-layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  padding-bottom: 15rem; /* Space for Kai in memory mode */
+  z-index: 10;
+}
+
+#memory-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+  margin-top: 120px;
+}
+
+.memory-frame {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  background: white;
+  transform: rotate(-2deg); /* Creating a photo card look */
+  transition: transform 0.5s ease;
+  max-height: 80vh; /* Increased to fit larger images */
+}
+
+.memory-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+#memory-image,
+#memory-video {
+  margin: auto;
+  max-width: 100%;
+  max-height: 65vh;
+  border-radius: 4px;
+  display: block;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .state-intro .kai-container {
+    width: 80%;
+  }
+
+  .state-memory {
+    justify-content: center;
+    padding-bottom: 80px;
+  }
+
+  .state-memory .kai-container {
+    width: 150px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .content-layer {
+    padding-bottom: 0;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  #memory-image,
+  #memory-video {
+    max-height: 40vh;
+  }
+}

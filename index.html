@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6 Meses con Daniela ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Background Layer -->
+      <div class="layer background-layer">
+        <div class="hearts-container"></div>
+      </div>
+
+      <!-- Content Layer (Memories / Letter) -->
+      <div class="layer content-layer">
+        <div id="memory-container" class="hidden">
+          <div class="memory-frame">
+            <!-- Images or Videos will be injected here -->
+            <img id="memory-image" src="" alt="Recuerdo" />
+            <video
+              id="memory-video"
+              src=""
+              loop
+              muted
+              playsinline
+              class="hidden"
+            ></video>
+          </div>
+        </div>
+
+        <div id="letter-container" class="hidden">
+          <div class="letter-card">
+            <h2>Para Daniela 💗</h2>
+            <h2 id="letter-text">Gracias por ser mi compañera a lo largo de todo este viaje llamado 2025,<br>
+              un año que quedará en mi corazón. Y ahora que llega a su final... mi deseo de navidad eres tú.<br> Felices 6 meses mi psicoromántica loca 💗. Att. tu viejito</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kai Layer -->
+      <div class="layer kai-layer state-intro">
+        <div class="kai-container">
+          <div class="speech-bubble">
+            <p id="dialogue-text"></p>
+            <div class="bubble-arrow"></div>
+          </div>
+          <img id="kai-image" src="assets/kai/SALUDANDO.png" alt="Kai" />
+        </div>
+      </div>
+
+      <!-- UI Layer -->
+      <div class="layer ui-layer">
+        <div class="instruction">
+          Presiona <span class="key">Espacio</span> o toca la pantalla para
+          continuar
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
