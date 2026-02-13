@@ -527,6 +527,20 @@ body {
     pointer-events: auto;
 }
 
+.proposal-card h2 {
+    font-size: 2.5rem;
+    color: var(--deep-pink);
+    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.proposal-card p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
 .proposal-buttons {
     display: flex;
     justify-content: center;

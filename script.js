@@ -75,7 +75,7 @@ const scenes = [
     {
     type: "intro",
     kaiMood: "assets/kai/CORAZON.png",
-    text: "Primero que nada, Felices 8 meses juntos 💗,por favor esta vez guardenme algo de torta jaja.",
+    text: "Primero que nada, Felices 8 meses juntos 💗,por favor esta vez guardenme algo de torta jeje.",
   },
   {
     type: "intro",
@@ -343,7 +343,7 @@ if(btnSi) {
     btnSi.addEventListener("click", () => {
         // Optional: Change Kai mood to something super happy
         kaiImage.src = "assets/kai/CORAZON.png";
-        typeWriter("¡Dijo que SII!... (y sin obligarla) ❤️❤️❤️ Nos vemos a las 7pm, ponte hermosa (más de lo que eres). Será una sorpresa el lugar, pero vistete un poco elegante para la ocasión, SEGURO te gustará.");
+        typeWriter("¡Dijo que SII!... (y sin obligarla) ❤️❤️❤️ Nos vemos a las 7pm mañana, ponte hermosa (más de lo que eres). Será una sorpresa el lugar, pero vistete un poco elegante para la ocasión, SEGURO te gustará.");
         
         // Hide entire proposal card including invitation and buttons
         const card = proposalContainer.querySelector(".proposal-card");
