@@ -3,248 +3,158 @@ const scenes = [
   {
     type: "intro",
     kaiMood: "assets/kai/SALUDANDO.png",
-    text: "Hola!!... tu debes ser Daniela, Neil me ha hablado muy bien de ti, eres aún más linda de lo que me dijo (tranquilo Neil, es toda tuya)",
+    text: "Hola Daniela, nos vemos de nuevo. Neil te hizo este regalito para este día tan especial",
   },
-{
+  {
     type: "intro",
-    kaiMood: "assets/kai/SALUDANDO.png",
-    text: "Me presento soy Kai, su compañero y asistente, estoy encantado de conocerte, al fin me personificó",
+    kaiMood: "assets/kai/CORAZON.png",
+    text: "No solo cumplen mes, sino también es 14 de Febrero: ¡DÍA DE LOS ENAMORADOS! ❤️",
   },
   {
     type: "intro",
     kaiMood: "assets/kai/PENSANDO.png",
-    text: "Jaja! que bueno que estes viendo esto, hoy es dia 14 y Neil me dijo que hoy cumplen 6 meses de novios, muchas felicidades",
+    text: "Espeeeera... pero aún no sé si realmente eres Daniela 🤔",
   },
   {
     type: "intro",
     kaiMood: "assets/kai/PENSANDO.png",
-    text: "eso es una cifra excelente, en la actualidad eso para muchos es como una eternidad",
-  },
-  {
-    type: "intro",
-    kaiMood: "assets/kai/PENSANDO.png",
-    text: "Contándolo en binario son unos cuantos números pero ese es más mi idioma",
-  },
-  {
-    type: "intro",
-    kaiMood: "assets/kai/CUCHI.png",
-    text: "Me estoy desviando discúlpame, éste es un regalo en el que ayudé a Neil para mostrarte su agradecimiento por estos 6 meses",
-  },
-  {
-    type: "intro",
-    kaiMood: "assets/kai/PENSANDO.png",
-    text: "Durante este tiempo han tenido muchos momentos juntos y que mejor que recapitularlos un poco, puedes ir pasando las imágenes con el espacio:",
+    text: "Responde estas preguntas para estar seguro...",
   },
 
-  // --- MEMORY SCENES ---
+  // --- QUIZ SCENES ---
   {
-    type: "memory",
-    kaiMood: "assets/kai/CUCHI.png",
-    memoryType: "image", // 'image' or 'video'
-    memorySrc: "assets/recuerdos/gym2.jpeg",
-    text: "EL PRIMERO...donde todo comenzó, el gimnasio, parece que fue ayer... el tiempo pasa volando",
+    type: "quiz",
+    question: "¿Dónde fue nuestra primera cita?",
+    options: ["Cine", "Mykonos y Tour por Valencia", "Metroland", "Parque"],
+    correct: 1, 
+    kaiMood: "assets/kai/PENSANDO.png"
   },
   {
-    type: "memory",
-    kaiMood: "assets/kai/RIENDO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/gym.jpeg",
-    text: "Neil pensaba que tu eras mayor y me contó sorprendido como apenas tenías 17",
+    type: "quiz",
+    question: "¿Qué me regalaste en mi cumpleaños que recuerdas con cariño?",
+    options: ["Perfume", "Zapatos", "Cadenita y Cosas de Messi", "Reloj"],
+    correct: 2,
+    kaiMood: "assets/kai/TIERNO.png"
   },
   {
-    type: "intro",
-    kaiMood: "assets/kai/PENSANDO.png",
-    text: "También me comentó sobre su primera cita que fue todo un Tour por Valencia, que divertido",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/TIERNO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/cumplenil.jpeg",
-    text: "Uno de los primeros recuerdos... el cumpleaños de Neil (me dijo que le regalaste muchas cosas de Messi aunque no te gusta)",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/RIENDO.png",
-    memoryType: "image", 
-    memorySrc: "assets/recuerdos/cumplenil.jpeg",
-    text: "Salen tan lindos, hasta hubo una foto que saliste con un chicle jajaja",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/TIERNO.png",
-    memoryType: "video",
-    memorySrc: "assets/recuerdos/metroland.mp4",
-    text: "luego siguió la segunda cita, Metroland, me dijo que fue divertidísima y que no le pudiste ganar en los carritos",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/RIENDO.png",
-    memoryType: "video",
-    memorySrc: "assets/recuerdos/video 1.mp4",
-    text: "aquí entre tú y yo mejor que se siga dedicando a programar porque de arquero no tiene nada jaja",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/TIERNO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/pedida.jpeg",
-    text: "luego llegó el momento mas esperado, la pedida",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/TIERNO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/pedida.jpeg",
-    text: "que linda estabas, Neil te preparó una muy buena sorpresa sin duda, no creo que te dejara ir tán facil",
+    type: "quiz",
+    question: "¿Dónde nos conocimos?",
+    options: ["Universidad", "Instagram", "Fiesta", "En el Gimnasio"],
+    correct: 3,
+    kaiMood: "assets/kai/RIENDO.png"
   },
     {
-    type: "memory",
-    kaiMood: "assets/kai/RIENDO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/futbol.jpeg",
-    text: "como olvidarlo!! el futbol, la primera vez que lo acompañaste... yo también le he aconsejado con la rodilla, es muy terco",
+    type: "quiz",
+    question: "Completa la frase: ¿No me dejarias ni...?",
+    options: ["Por un carro", "por Josh Hutcherson", "porque te paguen", "por nada del mundo"],
+    correct: 2,
+    kaiMood: "assets/kai/RIENDO.png"
   },
   {
-    type: "memory",
-    kaiMood: "assets/kai/PENSANDO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/futbol.jpeg",
-    text: "me comentó que es una de sus fotos favoritas porque ese día estabas muy linda",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/CUCHI.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/disco2.jpeg",
-    text: "la disco!!, que casi no te dejan pasar...ese día la pasaron genial",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/CUCHI.png",
-    memoryType: "video",
-    memorySrc: "assets/recuerdos/disco.mp4",
-    text: "Mira como disfrutaban, nunca habia visto bailar tan bien el aserejé",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/CORAZON.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/mexico.jpeg",
-    text: "su mesuario!, que sorpresa!! te llevó a un pedacito de México",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/PENSANDO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/mexico.jpeg",
-    text: "me comentó que te gusta mucho su cultura y te acompaño en eso, es muy linda",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/RIENDO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/fiesta.jpeg",
-    text: "la fiesta increible de tu amigo jaja aunque no tanto como el lugar",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/RIENDO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/fiesta.jpeg",
-    text: "me comentó que Guigue a las 12 de la noche es mas bonito, no conozco Guigue pero debe ser gracioso",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/TIERNO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/pistazie.jpeg",
-    text: "otro mesuario! que lindo dia, a Neil le gusta como te queda esa camisa",
-  },
-   {
-    type: "memory",
-    kaiMood: "assets/kai/TROTANDO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/caminata.jpeg",
-    text: "El día de la caminata, ese día sudaron como nunca! un poco de ejercicio es muy importante",
-  },
-  {
-    type: "memory",
-    kaiMood: "assets/kai/CUCHI.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/caminata.jpeg",
-    text: "Y el concierto de Victor Muñoz, que lindo dia. ",
+    type: "quiz",
+    question: "¿Que me regalabas siempre en el gym?",
+    options: ["Un chicle", "Agua", "Trululú", "Un gato"],
+    correct: 2,
+    kaiMood: "assets/kai/RIENDO.png"
   },
     {
-    type: "memory",
-    kaiMood: "assets/kai/PLAYA.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/playa.jpeg",
-    text: "TUCACAS... un poco de sol y playa siempre hacen los días perfectos.",
-  },
-      {
-    type: "memory",
-    kaiMood: "assets/kai/PLAYA.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/playa.jpeg",
-    text: "Una de las fotos favoritas de Neil, improvisada pero con un significado especial",
-  },
-    {
-    type: "memory",
-    kaiMood: "assets/kai/TIERNO.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/cumple_dani.jpeg",
-    text: "Tú cumpleee... de los recuerdos más recientes, conoció a tu hermano, y el regalo del reloj!",
-  },
-      {
-    type: "memory",
-    kaiMood: "assets/kai/CUCHI.png",
-    memoryType: "image",
-    memorySrc: "assets/recuerdos/legos.jpeg",
-    text: "Y que se han vuelto fanáticos de los legos, son una gran actividad en pareja",
-  },
-    {
-    type: "intro",
-    kaiMood: "assets/kai/CORAZON.png",
-    text: "Tantos momentos juntos, que sin duda hay que saber elegir con quien vivirlos y está con la persona correcta",
-  },
-    {
-    type: "intro",
-    kaiMood: "assets/kai/CORAZON.png",
-    text: "Felices 6 meses juntos ❤️, espero que la torta que hiciste sea deliciosa",
-  },
-    {
-    type: "intro",
-    kaiMood: "assets/kai/CORAZON.png",
-    text: "Disfruten mucho su día, aquí Neil te dejó una carta final",
+    type: "quiz",
+    question: "¿Cual fue la primera canción que bailamos?",
+    options: ["La melodía - Joey Montana", "Eres Perfecta - Oscarcito", "Ven Conmigo - Daddy Yankee ft. Prince Royce", "Me marcharé - Los Cadillacs ft. Wisin"],
+    correct: 3,
+    kaiMood: "assets/kai/RIENDO.png"
   },
 
-  // --- ESCENA DE CARTA (Placeholder) ---
+  // --- CONFIRMATION ---
   {
-    type: "letter",
-    kaiMood: "assets/kai/TIERNO.png", // Kai looks on happily
-    text: ""
+    type: "intro",
+    kaiMood: "assets/kai/CUCHI.png",
+    text: "¡DANI Genial! Si eres tú. jeje disculpa es que a veces hay que asegurarse...Ahora sí, veamos lo que Neil preparó para ti.",
   },
+
+    {
+    type: "intro",
+    kaiMood: "assets/kai/CORAZON.png",
+    text: "Primero que nada, Felices 8 meses juntos 💗,por favor esta vez guardenme algo de torta jaja.",
+  },
+  {
+    type: "intro",
+    kaiMood: "assets/kai/CORAZON.png",
+    text: "Pero antes de despedirme, Neil tiene una pregunta muy importante para ti...",
+  },
+
+  // --- PROPOSAL SCENE ---
+  {
+    type: "proposal",
+    kaiMood: "assets/kai/TIERNO.png",
+    text: "Mira..."
+  }
 ];
 
 // State
 let currentSceneIndex = 0;
 let isTyping = false;
 let typeWriterTimeout;
+let isWaiting = true; 
+let isQuizActive = false;
+let isProposalActive = false;
 
 // DOM Elements
 const kaiLayer = document.querySelector(".kai-layer");
 const contentLayer = document.querySelector(".content-layer");
 const memoryContainer = document.getElementById("memory-container");
 const letterContainer = document.getElementById("letter-container");
+const quizContainer = document.getElementById("quiz-container");
+const proposalContainer = document.getElementById("proposal-container");
 const kaiImage = document.getElementById("kai-image");
 const dialogueText = document.getElementById("dialogue-text");
 const memoryImage = document.getElementById("memory-image");
 const memoryVideo = document.getElementById("memory-video");
+const waitingScreen = document.getElementById("waiting-screen");
+const startBtn = document.getElementById("start-btn");
+
+// Quiz Elements
+const quizQuestion = document.getElementById("quiz-question");
+const quizOptions = document.getElementById("quiz-options");
+
+// Proposal Elements
+const btnSi = document.getElementById("btn-si");
+const btnNo = document.getElementById("btn-no");
+
+// Available photos for background
+const backgroundPhotos = [
+    "assets/recuerdos/gym2.jpeg",
+    "assets/recuerdos/cumplenil.jpeg",
+    "assets/recuerdos/pedida.jpeg",
+    "assets/recuerdos/futbol.jpeg",
+    "assets/recuerdos/mexico.jpeg",
+    "assets/recuerdos/playa.jpeg"
+];
 
 // --- INITIALIZATION ---
 function init() {
-  renderScene(0);
+  waitingScreen.classList.remove("hidden");
+  kaiLayer.classList.add("hidden"); 
+  contentLayer.classList.add("hidden");
+  if(quizContainer) quizContainer.classList.add("hidden");
+  if(proposalContainer) proposalContainer.classList.add("hidden");
+  
+  createHearts();
+}
+
+startBtn.addEventListener("click", () => {
+    startExperience();
+});
+
+function startExperience() {
+    isWaiting = false;
+    waitingScreen.classList.add("hidden");
+    
+    // Show main layers
+    kaiLayer.classList.remove("hidden");
+    contentLayer.classList.remove("hidden");
+    
+    renderScene(0);
 }
 
 // --- CORE FUNCTIONS ---
@@ -252,27 +162,36 @@ function init() {
 function renderScene(index) {
   const scene = scenes[index];
 
-  // 1. Update Text with Typewriter Effect
-  typeWriter(scene.text);
-
-  // 2. Update Kai Layout State
-  updateLayoutState(scene.type);
-
-  // 3. Update Kai Image
+  // Common: Update Kai
   kaiImage.src = scene.kaiMood;
+  updateLayoutState(scene.type);
+  
+  // Hide all containers by default
+  memoryContainer.classList.add("hidden");
+  letterContainer.classList.add("hidden");
+  if(quizContainer) quizContainer.classList.add("hidden");
+  if(proposalContainer) proposalContainer.classList.add("hidden");
+  isQuizActive = false;
+  isProposalActive = false;
 
-  // 4. Handle Content (Memories / Letter)
-  if (scene.type === "memory") {
+  // Typewriter for text (except quiz might handle it differently)
+  if (scene.type !== 'proposal') { // Proposal has text but might be different
+      typeWriter(scene.text || ""); 
+  }
+
+  // Handle Scene Types
+  if (scene.type === "intro") {
+      // Just Kai and Text
+      memoryVideo.pause();
+
+  } else if (scene.type === "memory") {
     memoryContainer.classList.remove("hidden");
-    letterContainer.classList.add("hidden");
 
     if (scene.memoryType === "video") {
       memoryImage.classList.add("hidden");
       memoryVideo.classList.remove("hidden");
       memoryVideo.src = scene.memorySrc;
-      memoryVideo
-        .play()
-        .catch((e) => console.log("Autoplay might need interaction", e));
+      memoryVideo.play().catch((e) => console.log("Autoplay", e));
     } else {
       memoryImage.classList.remove("hidden");
       memoryVideo.classList.add("hidden");
@@ -280,40 +199,75 @@ function renderScene(index) {
       memoryVideo.pause();
     }
   } else if (scene.type === "letter") {
-    memoryContainer.classList.add("hidden");
     letterContainer.classList.remove("hidden");
-    // If we had letter text, we'd set it here, but it's hardcoded in HTML or placeholder for now
-  } else {
-    // Intro
-    memoryContainer.classList.add("hidden");
-    letterContainer.classList.add("hidden");
     memoryVideo.pause();
+
+  } else if (scene.type === "quiz") {
+      isQuizActive = true;
+      if(quizContainer) quizContainer.classList.remove("hidden");
+      renderQuiz(scene);
+      typeWriter(""); // Clear bubble or put "..."
+      memoryVideo.pause();
+
+  } else if (scene.type === "proposal") {
+      isProposalActive = true;
+      if(proposalContainer) proposalContainer.classList.remove("hidden");
+      typeWriter(scene.text);
+      memoryVideo.pause();
   }
 }
 
+function renderQuiz(scene) {
+    if(!quizQuestion || !quizOptions) return;
+    
+    quizQuestion.innerText = scene.question;
+    quizOptions.innerHTML = "";
+    
+    scene.options.forEach((opt, idx) => {
+        const btn = document.createElement("button");
+        btn.innerText = opt;
+        btn.classList.add("quiz-option");
+        btn.onclick = () => {
+            if(idx === scene.correct) {
+                // Correct
+                btn.classList.add("correct");
+                // Play sound?
+                setTimeout(() => {
+                    isQuizActive = false;
+                    nextScene();
+                }, 1000);
+            } else {
+                // Wrong
+                btn.classList.add("wrong");
+                setTimeout(() => btn.classList.remove("wrong"), 500);
+            }
+        };
+        quizOptions.appendChild(btn);
+    });
+}
+
 function updateLayoutState(type) {
-  // Remove all state classes first
   kaiLayer.classList.remove("state-intro", "state-memory", "state-letter");
 
-  // Add new state class
-  if (type === "intro") {
+  if (type === "intro" || type === "quiz" || type === "proposal") {
     kaiLayer.classList.add("state-intro");
-  } else if (type === "memory") {
+  } else if (type === "memory" || type === "letter") {
     kaiLayer.classList.add("state-memory");
-  } else if (type === "letter") {
-    kaiLayer.classList.add("state-memory"); // Re-use memory layout (corner) for letter, or create specific one
-    // Optionally hide Kai or move him differently for letter
   }
 }
 
 function typeWriter(text) {
-  // Clear previous typing
   if (typeWriterTimeout) clearTimeout(typeWriterTimeout);
   isTyping = true;
   dialogueText.innerHTML = "";
 
+  if(!text) {
+      isTyping = false;
+      return;
+  }
+
   let i = 0;
-  const speed = 30; // ms per char
+  const speed = 30; 
 
   function type() {
     if (i < text.length) {
@@ -328,8 +282,9 @@ function typeWriter(text) {
 }
 
 function nextScene() {
+  if (isWaiting || isQuizActive || isProposalActive) return; 
+
   if (isTyping) {
-    // If typing, finish immediately
     if (typeWriterTimeout) clearTimeout(typeWriterTimeout);
     dialogueText.innerHTML = scenes[currentSceneIndex].text;
     isTyping = false;
@@ -345,42 +300,102 @@ function nextScene() {
 // --- EVENT LISTENERS ---
 
 document.body.addEventListener("keydown", (e) => {
-  if (e.code === "Space" || e.code === "ArrowRight") {
+  if ((e.code === "Space" || e.code === "ArrowRight")) {
     nextScene();
   }
 });
 
-document.body.addEventListener("click", () => {
+document.body.addEventListener("click", (e) => {
+  if (e.target.closest(".quiz-option") || e.target.closest("button")) return; 
   nextScene();
 });
 
-// --- HEARTS BACKGROUND ---
+// Proposal Logic
+if(btnNo) {
+    const moveBtn = () => {
+        // Get viewport dimensions
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        
+        // Get button dimensions (or estimate if not rendered yet)
+        const btnWidth = btnNo.offsetWidth || 100;
+        const btnHeight = btnNo.offsetHeight || 50;
+        
+        // Calculate max positions with safety margin
+        const maxX = viewportWidth - btnWidth - 50;
+        const maxY = viewportHeight - btnHeight - 50;
+        
+        // Ensure min position is at least 20px
+        const randomX = Math.max(20, Math.random() * maxX);
+        const randomY = Math.max(20, Math.random() * maxY);
+        
+        btnNo.style.position = "absolute";
+        btnNo.style.zIndex = "1000"; // Ensure it's on top
+        btnNo.style.left = randomX + "px";
+        btnNo.style.top = randomY + "px";
+    };
+
+    btnNo.addEventListener("mouseover", moveBtn);
+    btnNo.addEventListener("click", moveBtn);
+}
+
+if(btnSi) {
+    btnSi.addEventListener("click", () => {
+        // Optional: Change Kai mood to something super happy
+        kaiImage.src = "assets/kai/CORAZON.png";
+        typeWriter("¡Dijo que SII!... (y sin obligarla) ❤️❤️❤️ Nos vemos a las 7pm, ponte hermosa (más de lo que eres). Será una sorpresa el lugar, pero vistete un poco elegante para la ocasión, SEGURO te gustará.");
+        
+        // Hide entire proposal card including invitation and buttons
+        const card = proposalContainer.querySelector(".proposal-card");
+        if(card) card.style.display = "none";
+        
+        // Fireworks or confetti could go here
+    });
+}
+
+// --- HEARTS & PHOTOS BACKGROUND ---
 function createHearts() {
     const container = document.querySelector('.hearts-container');
-    const heartCount = 15; // Number of hearts
+    if(!container) return;
+    const count = 20; 
 
-    for (let i = 0; i < heartCount; i++) {
-        const heart = document.createElement('div');
-        heart.classList.add('heart');
+    for (let i = 0; i < count; i++) {
+        const isPhoto = Math.random() > 0.7;
         
-        // Random properties
-        const size = Math.random() * 20 + 10 + 'px';
+        let item;
+        if (isPhoto) {
+            item = document.createElement('img');
+            item.src = backgroundPhotos[Math.floor(Math.random() * backgroundPhotos.length)];
+            item.classList.add('floating-photo');
+        } else {
+            item = document.createElement('div');
+            item.classList.add('heart');
+        }
+        
         const left = Math.random() * 100 + '%';
         const delay = Math.random() * 5 + 's';
         const duration = Math.random() * 10 + 10 + 's';
+        
+        if (isPhoto) {
+             const rotation = (Math.random() * 30 - 15) + 'deg';
+             const endRotation = (Math.random() * 360) + 'deg';
+             item.style.setProperty('--rotation', rotation);
+             item.style.setProperty('--end-rotation', endRotation);
+             item.style.width = (Math.random() * 40 + 60) + 'px'; 
+        } else {
+            const size = Math.random() * 20 + 10 + 'px';
+            item.style.width = size;
+            item.style.height = size;
+        }
 
-        heart.style.width = size;
-        heart.style.height = size;
-        heart.style.left = left;
-        heart.style.animationDelay = delay;
-        heart.style.animationDuration = duration;
+        item.style.left = left;
+        item.style.animationDelay = delay;
+        item.style.animationDuration = duration;
 
-        container.appendChild(heart);
+        container.appendChild(item);
     }
 }
 
-// Start
 document.addEventListener('DOMContentLoaded', () => {
     init();
-    createHearts();
 });
